@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f7f2">
+  <meta name="description" content="Tanvir Kapre's certificates, achievements, and engineering journey.">
+  <title>Tanvir Kapre — Certificate Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#home">TK<span>.</span></a>
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#achievements">Achievements</a>
+      <a href="#about">About</a>
+      <a href="#resume">Resume</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container" id="home">
+      <div>
+        <p class="eyebrow">B.TECH STUDENT · INDIA</p>
+        <h1>Learning, building,<br>and documenting my<br><span>journey in technology.</span></h1>
+        <p class="hero-text">
+          I'm Tanvir Kapre, a second-year engineering student interested in
+          C++, Python, data structures, artificial intelligence, and software development.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="#certificates">Explore certificates ↓</a>
+          <a class="button secondary" href="#resume">View resume ↗</a>
+        </div>
+      </div>
+
+      <aside class="focus">
+        <p class="eyebrow">CURRENT FOCUS</p>
+        <div class="focus-row"><span>01</span><div><strong>C++ & DSA</strong><p>Programming fundamentals</p></div></div>
+        <div class="focus-row"><span>02</span><div><strong>Python & AI</strong><p>Building technical foundations</p></div></div>
+        <div class="focus-row"><span>03</span><div><strong>Continuous learning</strong><p>Courses, events, and projects</p></div></div>
+      </aside>
+    </section>
+
+    <section class="container section" id="certificates">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE LEARNING ARCHIVE</p>
+          <h2>Certificates<span>.</span></h2>
+          <p class="muted">A collection of courses, skills, and learning milestones.</p>
+        </div>
+        <span class="section-number">01 / COLLECTION</span>
+      </div>
+
+      <!-- UPLOAD CERTIFICATE FORM -->
+      <details class="upload-panel" id="addCertificatePanel">
+        <summary>＋ Add a new certificate</summary>
+        <form id="certificateForm" class="upload-form">
+          <div class="form-grid">
+            <label>
+              Certificate title *
+              <input name="title" required maxlength="150"
+                     placeholder="e.g. Python Programming">
+            </label>
+            <label>
+              Issuing organization *
+              <input name="organization" required maxlength="150"
+                     placeholder="e.g. Google">
+            </label>
+            <label>
+              Issue date
+              <input name="date" type="date">
+            </label>
+            <label>
+              Category *
+              <select name="category" required>
+                <option value="Programming">Programming</option>
+                <option value="AI/ML">AI / ML</option>
+                <option value="Cloud">Cloud</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Professional Development">Professional Development</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+            <label>
+              Credential ID (optional)
+              <input name="credential" maxlength="150"
+                     placeholder="Credential ID">
+            </label>
+            <label>
+              Verification URL (optional)
+              <input name="verify" type="url"
+                     placeholder="https://...">
+            </label>
+            <label class="full-width">
+              Description (optional)
+              <textarea name="description" maxlength="500" rows="2"
+                        placeholder="What did you learn?"></textarea>
+            </label>
+            <label class="full-width">
+              Certificate image or PDF *
+              <input name="file" type="file"
+                     accept="image/jpeg,image/png,image/webp,image/gif,application/pdf"
+                     required>
+              <small>Supported: JPG, PNG, WEBP, GIF, PDF. Maximum 15 MB per file.</small>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button class="button primary" type="submit">Save certificate</button>
+            <button class="button secondary" type="reset">Clear form</button>
+          </div>
+          <p class="form-message" id="certificateMessage" role="status"></p>
+        </form>
+      </details>
+
+      <div class="toolbar">
+        <input id="searchInput" type="search"
+               placeholder="Search certificates..."
+               aria-label="Search certificates">
+        <select id="categoryFilter" aria-label="Filter certificates by category">
+          <option value="all">All categories</option>
+          <option value="Programming">Programming</option>
+          <option value="AI/ML">AI / ML</option>
+          <option value="Cloud">Cloud</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Professional Development">Professional Development</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <p class="count" id="certificateCount" aria-live="polite">Loading certificates...</p>
+      <div class="certificate-grid" id="certificateGrid"></div>
+
+      <div class="empty-state" id="emptyState" hidden>
+        <h3>No certificates found</h3>
+        <p>Add a certificate or try a different search.</p>
+        <button class="button secondary" id="resetSearch" type="button">Clear filters</button>
+      </div>
+    </section>
+
+    <section class="container section" id="achievements">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">BEYOND THE CLASSROOM</p>
+          <h2>Achievements<span>.</span></h2>
+        </div>
+        <span class="section-number">02 / EXPERIENCE</span>
+      </div>
+      <article class="achievement">
+        <span class="achievement-year">2026</span>
+        <div>
+          <p class="eyebrow">VOLUNTEERING · EDITABLE PLACEHOLDER</p>
+          <h3>DIPEX 2026</h3>
+          <p class="muted">Add the exact certificate title, issuing organization, and your actual responsibilities after uploading your certificate.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="container section about" id="about">
+      <div>
+        <p class="eyebrow">A LITTLE ABOUT ME</p>
+        <h2>Curious by nature.<br>Learning by doing.</h2>
+      </div>
+      <div>
+        <p>I'm Tanvir Kapre, a second-year B.Tech student building my foundation in computer engineering. I work with C++ and Python and am developing my understanding of data structures and algorithms.</p>
+        <p>I'm interested in artificial intelligence, machine learning, and software development. This website documents my learning, certificates, and technical experiences.</p>
+        <div class="skills">
+          <span>C++</span><span>Python</span><span>Basic DSA</span>
+          <span>Video Editing</span><span>Content Creation</span><span>AI / ML — Learning</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESUME UPLOAD -->
+    <section class="container resume-section" id="resume">
+      <div>
+        <p class="eyebrow">THE PROFESSIONAL SUMMARY</p>
+        <h2>My resume<span>.</span></h2>
+        <p class="muted">Upload your latest resume PDF here.</p>
+        <p id="resumeStatus" class="resume-status" role="status">No resume uploaded yet.</p>
+        <div id="resumeCurrent" class="resume-current" hidden></div>
+      </div>
+
+      <form id="resumeForm" class="resume-upload">
+        <label for="resumeFile">Choose resume PDF</label>
+        <input id="resumeFile" name="resume" type="file"
+               accept="application/pdf,.pdf" required>
+        <small>PDF only · Maximum 15 MB</small>
+        <button class="button primary" type="submit">Save resume</button>
+        <p id="resumeMessage" class="form-message" role="status"></p>
+      </form>
+    </section>
+
+    <!-- BACKUP AND RESTORE -->
+    <section class="container backup-section">
+      <div>
+        <p class="eyebrow">YOUR DATA</p>
+        <h3>Backup your portfolio</h3>
+        <p class="muted">Export your saved certificates and resume to a backup file. You can import it later in this browser or another browser.</p>
+      </div>
+      <div class="backup-actions">
+        <button class="button secondary" id="exportBackup" type="button">Export backup ↓</button>
+        <label class="button secondary file-button">
+          Import backup ↑
+          <input id="importBackup" type="file" accept=".json,application/json" hidden>
+        </label>
+      </div>
+      <p id="backupMessage" class="form-message" role="status"></p>
+    </section>
+  </main>
+
+  <dialog id="previewDialog" class="preview-dialog">
+    <div class="dialog-header">
+      <strong id="dialogTitle">Certificate preview</strong>
+      <button id="closeDialog" class="close-button" type="button" aria-label="Close">✕</button>
+    </div>
+    <div id="dialogContent" class="dialog-content"></div>
+    <div class="dialog-footer">
+      <a id="dialogDownload" class="button primary" href="#" download>Download file ↓</a>
+    </div>
+  </dialog>
+
+  <footer class="footer">
+    <a class="brand" href="#home">TK<span>.</span></a>
+    <p>Learning in public. Building one step at a time.</p>
+    <div class="footer-links">
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a href="mailto:">Email ↗</a>
+    </div>
+    <small>© <span id="year"></span> Tanvir Kapre</small>
+  </footer>
+</body>
+</html>
